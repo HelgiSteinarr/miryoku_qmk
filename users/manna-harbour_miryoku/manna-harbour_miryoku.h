@@ -12,6 +12,10 @@ enum miryoku_layers {
 #define MIRYOKU_X(LAYER, STRING) U_##LAYER,
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+#if defined(KEYBOARD_beekeeb_piantor) && defined(UNICODEMAP_ENABLE)
+  U_ISV_BASE,
+  U_ISV_EXTRA,
+#endif
 };
 
 #define U_MACRO_VA_ARGS(macro, ...) macro(__VA_ARGS__)

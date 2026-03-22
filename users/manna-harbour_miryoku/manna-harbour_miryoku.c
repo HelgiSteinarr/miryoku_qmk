@@ -6,6 +6,9 @@
 #include QMK_KEYBOARD_H
 
 #include "manna-harbour_miryoku.h"
+#if defined(KEYBOARD_beekeeb_piantor) && defined(UNICODEMAP_ENABLE)
+  #include "icelandic_unicode.h"
+#endif
 
 
 // Additional Features double tap guard
@@ -46,6 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #define MIRYOKU_X(LAYER, STRING) [U_##LAYER] = U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER),
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+#if defined(KEYBOARD_beekeeb_piantor) && defined(UNICODEMAP_ENABLE)
+    [U_ISV_BASE] = MIRYOKU_PIANTOR_VOWELS_BASE,
+    [U_ISV_EXTRA] = MIRYOKU_PIANTOR_VOWELS_EXTRA,
+#endif
 };
 
 
