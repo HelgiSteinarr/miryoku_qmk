@@ -8,7 +8,7 @@
 #if defined(KEYBOARD_beekeeb_piantor) && defined(UNICODEMAP_ENABLE)
 
 #ifndef UNICODE_SELECTED_MODES
-  #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS
+  #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS, UNICODE_MODE_LINUX, UNICODE_MODE_WINCOMPOSE
 #endif
 
 #include "icelandic_unicode.h"
@@ -20,7 +20,7 @@
       N30,  N31,  K32,  K33,  K34,         K35,  K36,  K37,  N38,  N39 \
 ) \
 LAYOUT_split_3x6_3( \
-KC_NO,       K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  IS_ETH,   \
+UC_NEXT,     K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  IS_ETH,   \
 IS_O_UMLAUT, K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19,  IS_AE,    \
 MO(U_ISV_BASE), K20, K21, K22, K23, K24,          K25,  K26,  K27,  K28,  K29,  IS_THORN, \
                            K32,  K33,  K34,       K35,  K36,  K37 \
@@ -33,7 +33,7 @@ MO(U_ISV_BASE), K20, K21, K22, K23, K24,          K25,  K26,  K27,  K28,  K29,  
       N30,  N31,  K32,  K33,  K34,         K35,  K36,  K37,  N38,  N39 \
 ) \
 LAYOUT_split_3x6_3( \
-KC_NO,        K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  IS_ETH,   \
+UC_NEXT,      K00,  K01,  K02,  K03,  K04,         K05,  K06,  K07,  K08,  K09,  IS_ETH,   \
 IS_O_UMLAUT,  K10,  K11,  K12,  K13,  K14,         K15,  K16,  K17,  K18,  K19,  IS_AE,    \
 MO(U_ISV_EXTRA), K20, K21, K22, K23, K24,          K25,  K26,  K27,  K28,  K29,  IS_THORN, \
                             K32,  K33,  K34,       K35,  K36,  K37 \

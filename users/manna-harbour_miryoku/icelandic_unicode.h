@@ -1,6 +1,7 @@
 #pragma once
 
 #if defined(KEYBOARD_beekeeb_piantor) && defined(UNICODEMAP_ENABLE)
+#ifndef __ASSEMBLER__
 
 enum icelandic_unicode_names {
     ISU_THORN_LOWER,
@@ -36,4 +37,5 @@ enum icelandic_unicode_names {
 #define IS_Y_ACUTE  XP(ISU_Y_ACUTE_LOWER, ISU_Y_ACUTE_UPPER)
 #define IS_O_UMLAUT XP(ISU_O_UMLAUT_LOWER, ISU_O_UMLAUT_UPPER)
 
+#endif
 #endif
